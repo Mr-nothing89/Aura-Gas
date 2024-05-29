@@ -101,7 +101,7 @@ void AAuraPlayerController::CursorTrace()
 	if (!CursorHit.bBlockingHit) return;
 
 	LastActor = ThisActor;
-	ThisActor = Cast<IEnemyInterface>(CursorHit.GetActor());
+	ThisActor = CursorHit.GetActor();// por el TScriptInterface no es necesario usar el cast
 
 	if(LastActor != ThisActor)
 	{
