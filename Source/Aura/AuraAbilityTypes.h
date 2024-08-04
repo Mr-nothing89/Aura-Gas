@@ -54,6 +54,6 @@ struct TStructOpsTypeTraits<FAuraGameplayEffectContext> : public TStructOpsTypeT
 	enum
 	{
 		WithNetSerializer = true,
-		WithCopy = true
+		WithCopy = true // Necessary so that TSharedPtr<FHitResult> Data is copied around
 	};
 };

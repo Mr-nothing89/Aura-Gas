@@ -247,8 +247,8 @@ void UAuraAttributeSet::SetEffectProperties(const FGameplayEffectModCallbackData
 
 	if(IsValid(Props.SourceASC) && Props.SourceASC->AbilityActorInfo.IsValid() && Props.SourceASC->AbilityActorInfo->AvatarActor.IsValid())
 	{
-		//AActor* SourceAvatarActor = SourceASC->AbilityActorInfo->AvatarActor.Get();
-		Props.SourceAvatarActor = Props.SourceASC->GetAvatarActor();
+		//AActor* SourceAvatarActor = Props.SourceASC->AbilityActorInfo->AvatarActor.Get();
+		Props.SourceAvatarActor = Props.SourceASC->AbilityActorInfo->AvatarActor.Get();
 		Props.SourceController = Props.SourceASC->AbilityActorInfo->PlayerController.Get();
 		if(Props.SourceController == nullptr && Props.SourceAvatarActor != nullptr)
 		{
